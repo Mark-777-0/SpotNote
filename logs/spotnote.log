@@ -50,3 +50,4 @@ NameError: name 'LOGO_FOLDER' is not defined
 2022-08-22 11:14:16,426 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
 2022-08-22 11:14:44,344 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
 2022-08-22 11:14:57,884 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 13:20:31,679 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
