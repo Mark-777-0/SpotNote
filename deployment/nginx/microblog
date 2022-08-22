@@ -17,8 +17,8 @@ server {
     ssl_certificate_key /home/ubuntu/spotnote/certs/key.pem;
 
     # write access and error logs to /var/log
-    access_log /var/log/microblog_access.log;
-    error_log /var/log/microblog_error.log;
+    access_log /var/log/spotnote_access.log;
+    error_log /var/log/spotnote_error.log;
 
     location / {
         # forward application requests to the gunicorn server
