@@ -1,1 +1,1 @@
-## Spot Note
+# Welcome to SpoteNote!

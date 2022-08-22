@@ -1,0 +1,115 @@
+2022-08-22 09:24:17,084 ERROR: Exception on /auth/register [POST] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.token
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/app/auth/routes.py", line 42, in register
+    if form.validate_on_submit():
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/markrd/Desktop/spotnote/app/auth/forms.py", line 25, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2823, in first
+    return self.limit(1)._iter().first()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.token
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.token AS user_token, user.token_expiration AS user_token_expiration, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('mark', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-08-22 09:31:07,794 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:31:16,980 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:31:36,898 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:31:45,685 ERROR: Exception on /auth/login [POST] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.token
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2823, in first
+    return self.limit(1)._iter().first()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.token
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.token AS user_token, user.token_expiration AS user_token_expiration, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('susan', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

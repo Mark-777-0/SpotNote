@@ -1,29 +1,12 @@
-2022-08-21 22:27:24,074 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 22:33:32,861 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 22:50:00,935 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 22:50:55,619 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 22:51:22,308 ERROR: Exception on /reset_password_request [POST] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_mail.py", line 492, in send
-    message.send(connection)
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_mail.py", line 427, in send
-    connection.send(self)
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_mail.py", line 188, in send
-    self.host.sendmail(sanitize_address(envelope_from or message.sender),
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 867, in sendmail
-    self.ehlo_or_helo_if_needed()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 606, in ehlo_or_helo_if_needed
-    if not (200 <= self.ehlo()[0] <= 299):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 446, in ehlo
-    self.putcmd(self.ehlo_msg, name or self.local_hostname)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 373, in putcmd
-    self.send(str)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 365, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-
-During handling of the above exception, another exception occurred:
-
+2022-08-22 09:48:19,513 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:54:34,103 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:55:51,137 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 09:57:51,119 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:00:48,007 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:05:24,544 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:06:25,185 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:12:43,876 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:12:46,421 ERROR: Exception on /auth/login [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,39 +16,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/markrd/Desktop/spotnote/app/routes.py", line 41, in reset_password_request
-    send_password_reset_email(user)
-  File "/Users/markrd/Desktop/spotnote/app/email.py", line 14, in send_password_reset_email
-    send_email('[Microblog] Reset Your Password',
-  File "/Users/markrd/Desktop/spotnote/app/email.py", line 10, in send_email
-    mail.send(msg)
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_mail.py", line 492, in send
-    message.send(connection)
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_mail.py", line 152, in __exit__
-    self.host.quit()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 999, in quit
-    res = self.docmd("quit")
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 426, in docmd
-    self.putcmd(cmd, args)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 373, in putcmd
-    self.send(str)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 365, in send
-    raise SMTPServerDisconnected('please run connect() first')
-smtplib.SMTPServerDisconnected: please run connect() first
-2022-08-21 22:54:37,641 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 23:01:31,256 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
-2022-08-21 23:01:33,771 ERROR: Exception on /login [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/markrd/Desktop/spotnote/app/routes.py", line 109, in login
-    return render_template('login.html', title='Sign In', form=form)
+  File "/Users/markrd/Desktop/spotnote/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
     return _render(app, template, context)
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
@@ -74,8 +26,8 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/Users/markrd/Desktop/spotnote/app/templates/login.html", line 1, in top-level template code
-    {% extends "base.html" %}
+  File "/Users/markrd/Desktop/spotnote/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
   File "/Users/markrd/Desktop/spotnote/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
@@ -87,12 +39,75 @@ Traceback (most recent call last):
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
     {% block navbar %}
   File "/Users/markrd/Desktop/spotnote/app/templates/base.html", line 17, in block 'navbar'
-    <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+    <a class="navbar-brand" href="{{ url_for('main.index') }}"> <img src="{{ url_for('http://www.transparenttextures.com/patterns/ice-age.png')}}" width="100" height="30" alt=""> </a>
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2031, in url_for
     return self.handle_url_build_error(error, endpoint, values)
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2020, in url_for
     rv = url_adapter.build(  # type: ignore[union-attr]
   File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'index' instead?
-2022-08-21 23:02:17,653 INFO: Spotnote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:47]
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'http://www.transparenttextures.com/patterns/ice-age.png'. Did you mean 'main.translate_text' instead?
+2022-08-22 10:21:42,887 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:21:45,343 ERROR: Exception on / [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/markrd/Desktop/spotnote/app/main/routes.py", line 28, in index
+    logo_file = os.path.join(app.config['UPLOAD_FOLDER'],'SpoteNote.svg')
+NameError: name 'os' is not defined
+2022-08-22 10:22:01,839 ERROR: Exception on / [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/markrd/Desktop/spotnote/app/main/routes.py", line 28, in index
+    logo_file = os.path.join(app.config['UPLOAD_FOLDER'],'SpoteNote.svg')
+NameError: name 'os' is not defined
+2022-08-22 10:22:04,131 ERROR: Exception on / [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/markrd/Desktop/spotnote/app/main/routes.py", line 28, in index
+    logo_file = os.path.join(app.config['UPLOAD_FOLDER'],'SpoteNote.svg')
+NameError: name 'os' is not defined
+2022-08-22 10:22:15,488 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:22:43,185 ERROR: Exception on /index [GET] [in /Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/markrd/Desktop/spotnote/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/markrd/Desktop/spotnote/app/main/routes.py", line 28, in index
+    logo_file = os.path.join(app.config['UPLOAD_FOLDER'],'SpoteNote.svg')
+NameError: name 'app' is not defined
+2022-08-22 10:25:13,937 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
+2022-08-22 10:26:13,022 INFO: SpotNote startup [in /Users/markrd/Desktop/spotnote/app/__init__.py:89]
