@@ -14,15 +14,15 @@ SpotNote is a social media site for musicians hosted on Heroku. The framework us
 
 I have organized the code using prettier formatting
 
-I learned quite a lot about Flask Routes, CSRF, and SQLite while putting this project together. I worked with 
+I learned quite a lot about Flask Routes, CSRF, and SQLite while putting this project together. Also learned about proper python Venv usage, making Flask applications scalable via templates (passing in props instead of hard coding every page), inheritance of templates, 
 
 ### Future and Things to Improve
 
 The websites elastic search function does not work yet, as Heroku wants me to put a credit card on file, but I did not want to do that.
 
-You cannot upload pictures or sound bytes yet, so some of the functionality is still lacking. Also hyperlinks are not yet allowed, so it's like a worse version of Twitter/Reddit.
+You cannot upload pictures or sound bytes yet, so some of the functionality is still lacking. Also hyperlinks are not yet allowed, so it's like a lite version of Twitter/Reddit.
 
-
+There is no delete posts button, or login e-mail verification so moderation is poor.
 
 
 
