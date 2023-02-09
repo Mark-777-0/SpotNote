@@ -6,7 +6,7 @@
 </a>
 
 
-## Want to see the code in action? Check out the [Heroku Demo](https://spotnote.herokuapp.com/)
+## Heroku has eliminated free plans and the site is no longer hosted
 
 # Technical/Reflection
 
